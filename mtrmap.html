@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTR Report to Google Maps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 0.5em;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>MTR Report to Google Maps</h1>
+        <form action="mtrmap.php" method="post">
+            <label for="mtrReport">Paste your MTR report here:</label>
+            <textarea name="mtrReport" id="mtrReport" rows="10" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&callback=initMap" async defer></script>
+</body>
+</html>
